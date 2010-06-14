@@ -1,0 +1,44 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="018BBBCD-B162-47EA-BF1A-03C568EEC7C8/d:Rhino/f:RhinoMocksMockFactory.cs" caret="464" fromTop="16" />
+      <File id="018BBBCD-B162-47EA-BF1A-03C568EEC7C8/d:Core/f:SubjectFactory.cs" caret="0" fromTop="0" />
+      <File id="018BBBCD-B162-47EA-BF1A-03C568EEC7C8/d:Core/d:Extensions/f:TypeExtensions.cs" caret="190" fromTop="7" />
+      <File id="DB028A83-6051-4718-A37D-5CE643BD5BCD/d:Rhino/f:NewsServiceSpecs.cs" caret="0" fromTop="0" />
+      <File id="DB028A83-6051-4718-A37D-5CE643BD5BCD/f:NewsController.cs" caret="0" fromTop="0" />
+      <File id="DB028A83-6051-4718-A37D-5CE643BD5BCD/f:NewsController2.cs" caret="0" fromTop="0" />
+      <File id="DB028A83-6051-4718-A37D-5CE643BD5BCD/f:NewsController3.cs" caret="0" fromTop="0" />
+      <File id="DB028A83-6051-4718-A37D-5CE643BD5BCD/f:NewsService.cs" caret="0" fromTop="0" />
+      <File id="DB028A83-6051-4718-A37D-5CE643BD5BCD/f:INewsService.cs" caret="0" fromTop="0" />
+      <File id="02FC5C15-6549-4A1A-8108-3BDF79033877/f:ObservationContextSpecs.cs" caret="0" fromTop="0" />
+      <File id="02FC5C15-6549-4A1A-8108-3BDF79033877/f:SubjectDependencyBuilderSpecs.cs" caret="0" fromTop="0" />
+      <File id="02FC5C15-6549-4A1A-8108-3BDF79033877/f:SubjectFactorySpecs.cs" caret="0" fromTop="0" />
+      <File id="02FC5C15-6549-4A1A-8108-3BDF79033877/f:TypeExtensionsSpecs.cs" caret="0" fromTop="0" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="018BBBCD-B162-47EA-BF1A-03C568EEC7C8/d:Rhino/f:RhinoMocksMockFactory.cs" caret="91" fromTop="3" />
+      <File id="018BBBCD-B162-47EA-BF1A-03C568EEC7C8/d:Core/f:SubjectFactory.cs" caret="818" fromTop="17" />
+      <File id="018BBBCD-B162-47EA-BF1A-03C568EEC7C8/d:Core/f:SubjectFactory.cs" caret="150" fromTop="8" />
+      <File id="018BBBCD-B162-47EA-BF1A-03C568EEC7C8/d:Core/f:SubjectFactory.cs" caret="0" fromTop="0" />
+      <File id="018BBBCD-B162-47EA-BF1A-03C568EEC7C8/d:Core/d:Extensions/f:TypeExtensions.cs" caret="190" fromTop="7" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+</Configuration>
