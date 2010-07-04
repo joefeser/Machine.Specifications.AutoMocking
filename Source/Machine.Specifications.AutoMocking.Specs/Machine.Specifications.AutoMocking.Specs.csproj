@@ -69,6 +69,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Machine.Specification.AutoMocking.Rhino\Machine.Specification.AutoMocking.Rhino.csproj">
+      <Project>{78395E34-6756-4F88-9A0D-F92907FC2F0B}</Project>
+      <Name>Machine.Specification.AutoMocking.Rhino</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Machine.Specifications.AutoMocking\Machine.Specifications.AutoMocking.csproj">
       <Project>{018BBBCD-B162-47EA-BF1A-03C568EEC7C8}</Project>
       <Name>Machine.Specifications.AutoMocking</Name>

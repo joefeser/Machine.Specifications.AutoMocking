@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Machine.Specifications.Auto
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Machine.Specifications.AutoMocking.Specs", "Machine.Specifications.AutoMocking.Specs\Machine.Specifications.AutoMocking.Specs.csproj", "{02FC5C15-6549-4A1A-8108-3BDF79033877}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Machine.Specification.AutoMocking.Rhino", "Machine.Specification.AutoMocking.Rhino\Machine.Specification.AutoMocking.Rhino.csproj", "{78395E34-6756-4F88-9A0D-F92907FC2F0B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,10 @@ Global
 		{02FC5C15-6549-4A1A-8108-3BDF79033877}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{02FC5C15-6549-4A1A-8108-3BDF79033877}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{02FC5C15-6549-4A1A-8108-3BDF79033877}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78395E34-6756-4F88-9A0D-F92907FC2F0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78395E34-6756-4F88-9A0D-F92907FC2F0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78395E34-6756-4F88-9A0D-F92907FC2F0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78395E34-6756-4F88-9A0D-F92907FC2F0B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
