@@ -6,7 +6,6 @@ namespace Machine.Specifications.AutoMocking.Core.Extensions
     using System.Linq;
     using System.Reflection;
     using System.Text;
-    using Utility;
 
     #endregion
 
