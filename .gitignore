@@ -1,8 +1,8 @@
 obj
 bin
 _ReSharper.*
-*.csproj.user
-*.resharper.user
+*.user
+*.orig
 *.resharper
 *.suo
 *.cache
