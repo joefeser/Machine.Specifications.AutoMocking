@@ -70,6 +70,7 @@
     <Reference Include="System.Data" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Moq\MoqMocksFactorySpecs.cs" />
     <Compile Include="Moq\ObservationContextSpecs.cs" />
     <Compile Include="Moq\SubjectDependencyBuilderSpecs.cs" />
     <Compile Include="Moq\SubjectFactorySpecs.cs" />
