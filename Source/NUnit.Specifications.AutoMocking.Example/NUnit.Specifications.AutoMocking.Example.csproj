@@ -57,6 +57,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Libraries\nunit.framework.dll</HintPath>
     </Reference>
+    <Reference Include="Rhino.Mocks, Version=3.6.0.0, Culture=neutral, PublicKeyToken=0b3305902db7183f, processorArchitecture=MSIL" />
     <Reference Include="SharpTestsEx">
       <HintPath>..\..\Libraries\SharpTestsEx.dll</HintPath>
     </Reference>
@@ -76,6 +77,10 @@
     <Compile Include="INewsService.cs" />
     <Compile Include="NewsService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rhino\NewsController2Specs.cs" />
+    <Compile Include="Rhino\NewsController3Specs.cs" />
+    <Compile Include="Rhino\NewsControllerSpecs.cs" />
+    <Compile Include="Rhino\NewsServiceSpecs.cs" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
