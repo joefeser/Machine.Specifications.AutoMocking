@@ -27,7 +27,7 @@ namespace Machine.Specifications.AutoMocking.Example.Moq
         Because of = () => result = subject.Index(); 
 
         It should_ask_the_news_service_for_the_latest_headline =
-            () => Mock.Get(newsService).Verify(x => x.GetLatestHeadline());
+            () => newsService.was_told_to(x => x.GetLatestHeadline());
 
         It should_display_the_latest_headline = () => result.ShouldEqual("The latest headline");
     }

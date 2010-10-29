@@ -29,7 +29,7 @@ namespace Machine.Specifications.AutoMocking.Example.Rhino
         Because of = () => result = subject.Index(); // the subject has been created for us automatically, with all registered dependencies
 
         It should_ask_the_news_service_for_the_latest_headline =
-            () => newsService.AssertWasCalled(x => x.GetLatestHeadline());
+            () => newsService.was_told_to(x => x.GetLatestHeadline());
 
         It should_display_the_latest_headline = () => result.ShouldEqual("The latest headline");
     }
