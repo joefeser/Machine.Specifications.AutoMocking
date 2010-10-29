@@ -19,7 +19,7 @@
     {
         protected Exception ExceptionThrown { get; private set; }
 
-        [SetUp]
+        [TestFixtureSetUp]
         public void Setup()
         {
             this.EstablishContext();
