@@ -57,14 +57,11 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Libraries\Machine.Specifications.dll</HintPath>
     </Reference>
-    <Reference Include="Moq, Version=4.0.10531.7, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL">
+    <Reference Include="Moq, Version=4.0.812.4, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Libraries\Moq.dll</HintPath>
     </Reference>
-    <Reference Include="Rhino.Mocks, Version=3.6.0.0, Culture=neutral, PublicKeyToken=0b3305902db7183f, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Libraries\Rhino.Mocks.dll</HintPath>
-    </Reference>
+    <Reference Include="Rhino.Mocks, Version=3.6.0.0, Culture=neutral, PublicKeyToken=0b3305902db7183f, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -87,14 +84,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Machine.Specification.AutoMocking.Rhino\Machine.Specification.AutoMocking.Rhino.csproj">
-      <Project>{78395E34-6756-4F88-9A0D-F92907FC2F0B}</Project>
-      <Name>Machine.Specification.AutoMocking.Rhino</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Machine.Specifications.AutoMocking.Moq\Machine.Specifications.AutoMocking.Moq.csproj">
-      <Project>{2F64D77F-2A00-4605-A413-E244EFF84C80}</Project>
-      <Name>Machine.Specifications.AutoMocking.Moq</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Machine.Specifications.AutoMocking\Machine.Specifications.AutoMocking.csproj">
       <Project>{018BBBCD-B162-47EA-BF1A-03C568EEC7C8}</Project>
       <Name>Machine.Specifications.AutoMocking</Name>
