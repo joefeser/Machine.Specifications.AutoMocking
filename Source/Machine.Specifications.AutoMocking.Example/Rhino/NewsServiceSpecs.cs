@@ -1,9 +1,11 @@
-using Machine.Specifications;
-using Machine.Specifications.AutoMocking.Rhino;
-using System.Collections.Generic;
-
 namespace Machine.Specifications.AutoMocking.Example.Rhino
 {
+    using global::Specifications.AutoMocking.Rhino;
+
+    using Machine.Specifications;
+
+    using System.Collections.Generic;
+
     /// <summary>
     /// Example specification for a class with a contract that uses constructor based DI
     /// </summary>

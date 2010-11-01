@@ -1,9 +1,9 @@
-using Machine.Specifications;
-using Machine.Specifications.AutoMocking.Rhino;
-using Rhino.Mocks;
-
 namespace Machine.Specifications.AutoMocking.Example.Rhino
 {
+    using global::Specifications.AutoMocking.Rhino;
+
+    using global::Rhino.Mocks;
+
     /// <summary>
     /// Example specification for a class without a contract that uses property based DI
     /// </summary>

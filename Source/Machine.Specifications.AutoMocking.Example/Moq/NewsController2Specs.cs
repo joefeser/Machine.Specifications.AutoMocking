@@ -1,8 +1,11 @@
-using Machine.Specifications.AutoMocking.Moq;
-using Moq;
-
 namespace Machine.Specifications.AutoMocking.Example.Moq
 {
+    using global::Moq;
+
+    using global::Specifications.AutoMocking.Moq;
+
+    using It = Machine.Specifications.It;
+
     /// <summary>
     /// Example specification for a class without a contract that manually creates subject
     /// </summary>

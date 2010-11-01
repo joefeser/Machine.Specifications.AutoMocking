@@ -1,8 +1,9 @@
-using Machine.Specifications.AutoMocking.Moq;
-using System.Collections.Generic;
-
 namespace Machine.Specifications.AutoMocking.Example.Moq
 {
+    using global::Specifications.AutoMocking.Moq;
+
+    using System.Collections.Generic;
+
     /// <summary>
     /// Example specification for a class with a contract that uses constructor based DI
     /// </summary>

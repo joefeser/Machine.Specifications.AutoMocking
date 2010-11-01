@@ -2,8 +2,8 @@
 {
     using System;
 
-    using Machine.Specifications.AutoMocking;
-    using Machine.Specifications.AutoMocking.Moq;
+    using global::Specifications.AutoMocking;
+    using global::Specifications.AutoMocking.Moq;
 
     using NUnit.Framework;
 

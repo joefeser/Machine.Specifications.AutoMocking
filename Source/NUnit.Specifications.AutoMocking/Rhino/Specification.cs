@@ -2,8 +2,8 @@
 {
     using System;
 
-    using Machine.Specifications.AutoMocking;
-    using Machine.Specifications.AutoMocking.Rhino;
+    using global::Specifications.AutoMocking;
+    using global::Specifications.AutoMocking.Rhino;
 
     using NUnit.Framework;
 
