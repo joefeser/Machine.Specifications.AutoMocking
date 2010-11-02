@@ -1,9 +1,9 @@
-using System;
-using Rhino.Mocks;
-
 namespace Specifications.AutoMocking.Rhino
 {
-	public static class MoqExtensions
+    using System;
+    using global::Rhino.Mocks;
+
+    public static class MoqExtensions
 	{
 		static public void was_told_to<T>(this T mock, Action<T> action) where T : class
 		{

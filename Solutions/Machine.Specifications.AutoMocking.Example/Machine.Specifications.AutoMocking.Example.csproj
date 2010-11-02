@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{02FC5C15-6549-4A1A-8108-3BDF79033877}</ProjectGuid>
+    <ProjectGuid>{DB028A83-6051-4718-A37D-5CE643BD5BCD}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Specifications.AutoMocking.Specs</RootNamespace>
-    <AssemblyName>Specifications.AutoMocking.Specs</AssemblyName>
+    <RootNamespace>Specifications.AutoMocking.Example</RootNamespace>
+    <AssemblyName>Specifications.AutoMocking.Example</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <FileUpgradeFlags>
@@ -37,65 +37,47 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\Build\Debug\Tests\</OutputPath>
+    <OutputPath>bin\debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <NoWarn>169</NoWarn>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\..\Build\Release\Tests\</OutputPath>
+    <OutputPath>bin\release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Machine.Specifications, Version=0.3.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Libraries\Machine.Specifications.dll</HintPath>
-    </Reference>
-    <Reference Include="Moq, Version=4.0.812.4, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Libraries\Moq.dll</HintPath>
-    </Reference>
-    <Reference Include="Rhino.Mocks, Version=3.6.0.0, Culture=neutral, PublicKeyToken=0b3305902db7183f, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Libraries\Rhino.Mocks.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
-    <Reference Include="System.Data" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Moq\MoqMocksFactorySpecs.cs" />
-    <Compile Include="Moq\ObservationContextSpecs.cs" />
-    <Compile Include="Moq\SubjectDependencyBuilderSpecs.cs" />
-    <Compile Include="Moq\SubjectFactorySpecs.cs" />
-    <Compile Include="Moq\TypeExtensionsSpecs.cs" />
-    <Compile Include="Rhino\SubjectDependencyBuilderSpecs.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Rhino\SubjectFactorySpecs.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Rhino\TypeExtensionsSpecs.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Rhino\ObservationContextSpecs.cs">
-      <SubType>Code</SubType>
-    </Compile>
+    <Compile Include="Moq\NewsController2Specs.cs" />
+    <Compile Include="Moq\NewsController3Specs.cs" />
+    <Compile Include="Moq\NewsControllerSpecs.cs" />
+    <Compile Include="Moq\NewsServiceSpecs.cs" />
+    <Compile Include="NewsController3.cs" />
+    <Compile Include="Rhino\NewsController3Specs.cs" />
+    <Compile Include="NewsController2.cs" />
+    <Compile Include="Rhino\NewsController2Specs.cs" />
+    <Compile Include="NewsController.cs" />
+    <Compile Include="Rhino\NewsControllerSpecs.cs" />
+    <Compile Include="INewsService.cs" />
+    <Compile Include="NewsService.cs" />
+    <Compile Include="Rhino\NewsServiceSpecs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Specifications.AutoMocking\Specifications.AutoMocking.csproj">
       <Project>{018BBBCD-B162-47EA-BF1A-03C568EEC7C8}</Project>
-      <Name>Specifications.AutoMocking</Name>
+      <Name>Machine.Specifications.AutoMocking</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -120,7 +102,6 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
