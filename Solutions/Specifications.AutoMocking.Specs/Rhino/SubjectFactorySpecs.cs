@@ -41,7 +41,6 @@ namespace Specifications.AutoMocking.Specs.Rhino
     [Subject(typeof(SubjectFactory))]
     public class when_creating_the_subject : context_for_subject_factory
     {
-        static ISubjectDependencyBuilder builder;
         static AClassWithDependencies result;
 
         Because of = () => result = subject.create<AClassWithDependencies, AClassWithDependencies>();

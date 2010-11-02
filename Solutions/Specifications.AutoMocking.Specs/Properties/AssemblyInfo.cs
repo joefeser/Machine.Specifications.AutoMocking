@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Machine.Specifications.AutoMocking.Specs")]
+[assembly: AssemblyTitle("Specifications.AutoMocking.Specs")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("James Broome")]
-[assembly: AssemblyProduct("Machine.Specifications.AutoMocking.Specs")]
+[assembly: AssemblyProduct("Specifications.AutoMocking.Specs")]
 [assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
