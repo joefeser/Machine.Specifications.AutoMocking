@@ -8,7 +8,6 @@ _ReSharper.*
 *.cache
 *~
 *.swp
-/Build
 NDependOut
 Drops
 .setup-done
