@@ -1,4 +1,6 @@
-﻿namespace NUnit.Specifications.AutoMocking.Moq
+﻿using Moq;
+
+namespace NUnit.Specifications.AutoMocking.Moq
 {
     using System;
 
@@ -42,5 +44,10 @@
         protected abstract void EstablishContext();
 
         protected abstract void When();
+
+        protected virtual Mock<T> MockedDependencyOf<T>() where T : class
+        {
+            return Mock.Get(DependencyOf<T>());
+        }
     }
 }
