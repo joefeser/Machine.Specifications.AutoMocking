@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnit.Specifications.AutoMo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnit.Specifications.AutoMocking.Example", "NUnit.Specifications.AutoMocking.Example\NUnit.Specifications.AutoMocking.Example.csproj", "{FBD1B91B-6BA0-4CBE-A36A-54A488E0231F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xunit.Specifications.AutoMocking", "Xunit.Specifications.AutoMocking\Xunit.Specifications.AutoMocking.csproj", "{DBA85B5B-7EE2-4B96-8FB8-DEDBBDFF1D0E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xunit.Specifications.AutoMocking.Examples", "Xunit.Specifications.AutoMocking.Examples\Xunit.Specifications.AutoMocking.Examples.csproj", "{D3F5D425-2913-415E-98A5-4404A6F15329}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +35,14 @@ Global
 		{FBD1B91B-6BA0-4CBE-A36A-54A488E0231F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FBD1B91B-6BA0-4CBE-A36A-54A488E0231F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FBD1B91B-6BA0-4CBE-A36A-54A488E0231F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBA85B5B-7EE2-4B96-8FB8-DEDBBDFF1D0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBA85B5B-7EE2-4B96-8FB8-DEDBBDFF1D0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBA85B5B-7EE2-4B96-8FB8-DEDBBDFF1D0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBA85B5B-7EE2-4B96-8FB8-DEDBBDFF1D0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3F5D425-2913-415E-98A5-4404A6F15329}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3F5D425-2913-415E-98A5-4404A6F15329}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3F5D425-2913-415E-98A5-4404A6F15329}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3F5D425-2913-415E-98A5-4404A6F15329}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,41 +1,39 @@
-﻿namespace NUnit.Specifications.AutoMocking.Rhino
+﻿namespace Xunit.Specifications.AutoMocking.Rhino
 {
     using System;
-
     using global::Specifications.AutoMocking;
     using global::Specifications.AutoMocking.Rhino;
 
-    using NUnit.Framework;
 
     public abstract class Specification<TSubject> : Specification<TSubject, TSubject>
     {
     }
     /// <summary>
-    /// base class for writing specs using nunit with the subject dependencis mocked with Rhino.Mocks
+    /// base class for writing specs using xunit with the subject dependencis mocked with Rhino.Mocks
     /// more info about the specification implementation at http://flux88.com/blog/the-transition-from-tdd-to-bdd/. 
     /// </summary>
-    public abstract class Specification<TContract, TSubject> : Specification<TContract, TSubject, RhinoMocksMockFactory>
+    public abstract class Specification<TContract, TSubject> : 
+        Specification<TContract, TSubject, RhinoMocksMockFactory>, 
+        IUseFixture<XUnitSpecFixture>
         where TSubject : TContract
     {
-        [TestFixtureSetUp]
-        public void Setup()
-        {
-            this.EstablishContext();
+        #region IUseFixture<XUnitSpecFixture> Members
 
+        public void SetFixture(XUnitSpecFixture unused)
+        {
             try
             {
-                this.When();
+                EstablishContext();
+
+                When();
             }
-            catch (Exception exc)
+            catch (Exception e)
             {
-                this.ExceptionThrown = exc;
+                ExceptionThrown = e;
             }
         }
 
-        [TearDown]
-        public virtual void TearDown()
-        {
-        }
+        #endregion
 
         protected abstract void EstablishContext();
 

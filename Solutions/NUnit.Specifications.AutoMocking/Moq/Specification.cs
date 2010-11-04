@@ -19,8 +19,6 @@ namespace NUnit.Specifications.AutoMocking.Moq
     public abstract class Specification<TContract, TSubject> : Specification<TContract, TSubject, MoqMocksMockFactory>
         where TSubject : TContract
     {
-        protected Exception ExceptionThrown { get; private set; }
-
         [TestFixtureSetUp]
         public void Setup()
         {
@@ -41,13 +39,14 @@ namespace NUnit.Specifications.AutoMocking.Moq
         {
         }
 
-        protected abstract void EstablishContext();
-
-        protected abstract void When();
-
         protected virtual Mock<T> MockedDependencyOf<T>() where T : class
         {
             return Mock.Get(DependencyOf<T>());
         }
+
+        protected abstract void EstablishContext();
+
+        protected abstract void When();
+
     }
 }
