@@ -48,6 +48,7 @@
     <Compile Include="Rhino\Specification.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="NUnitSpecificationBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Specifications.AutoMocking\Specifications.AutoMocking.csproj">

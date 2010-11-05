@@ -1,54 +1,21 @@
 ﻿using Moq;
+using Specifications.AutoMocking.Moq;
 
 namespace NUnit.Specifications.AutoMocking.Moq
 {
-    using System;
-
-    using global::Specifications.AutoMocking;
-    using global::Specifications.AutoMocking.Moq;
-
-    using NUnit.Framework;
-
     public abstract class Specification<TSubject> : Specification<TSubject, TSubject>
     {
     }
     /// <summary>
-    /// base class for writing specs using nunit with the subject dependencis mocked with Moq
+    /// base class for writing specs using nunit with the subject dependencies mocked with Moq
     /// more info about the specification implementation at http://flux88.com/blog/the-transition-from-tdd-to-bdd/. 
     /// </summary>
-    public abstract class Specification<TContract, TSubject> : Specification<TContract, TSubject, MoqMocksMockFactory>
+    public abstract class Specification<TContract, TSubject> : NUnitSpecificationBase<TContract, TSubject, MoqMocksMockFactory>
         where TSubject : TContract
     {
-        [TestFixtureSetUp]
-        public void Setup()
-        {
-            this.EstablishContext();
-
-            try
-            {
-                this.When();
-            }
-            catch (Exception exc)
-            {
-                this.ExceptionThrown = exc;
-            }
-        }
-
-        [TearDown]
-        public virtual void TearDown()
-        {
-        }
-
         protected virtual Mock<T> MockedDependencyOf<T>() where T : class
         {
             return Mock.Get(DependencyOf<T>());
         }
-
-        protected abstract void EstablishContext();
-
-        protected abstract void When();
-
-        protected Exception ExceptionThrown { get; set; }
-
     }
 }
