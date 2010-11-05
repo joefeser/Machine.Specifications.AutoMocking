@@ -40,5 +40,7 @@
         protected abstract void EstablishContext();
 
         protected abstract void When();
+
+        protected Exception ExceptionThrown { get; set; }
     }
 }

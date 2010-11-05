@@ -13,7 +13,7 @@ namespace Xunit.Specifications.AutoMocking.Moq
     /// more info about the specification implementation at http://flux88.com/blog/the-transition-from-tdd-to-bdd/. 
     /// </summary>
     public abstract class Specification<TContract, TSubject> : 
-        Specification<TContract, TSubject, MoqMocksMockFactory> ,IUseFixture<XUnitSpecFixture>
+        Specification<TContract, TSubject, MoqMocksMockFactory> ,IUseFixture<object>
         where TSubject : TContract
     {
         protected virtual Mock<T> MockedDependencyOf<T>() where T : class
@@ -21,9 +21,9 @@ namespace Xunit.Specifications.AutoMocking.Moq
             return Mock.Get(DependencyOf<T>());
         }
 
-        #region IUseFixture<Foo> Members
+        #region IUseFixture<object> Members
 
-        public void SetFixture(XUnitSpecFixture unused)
+        public void SetFixture(object unused)
         {
             try
             {
@@ -37,6 +37,8 @@ namespace Xunit.Specifications.AutoMocking.Moq
             }
         }
         #endregion
+
+        protected Exception ExceptionThrown { get; set; }
 
         protected abstract void EstablishContext();
 

@@ -63,7 +63,5 @@ namespace Specifications.AutoMocking
         {
             observation_context.provide_a_basic_subject_constructor_argument(value);
         }
-
-        protected Exception ExceptionThrown { get; set; }
     }
 }

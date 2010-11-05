@@ -14,12 +14,12 @@
     /// </summary>
     public abstract class Specification<TContract, TSubject> : 
         Specification<TContract, TSubject, RhinoMocksMockFactory>, 
-        IUseFixture<XUnitSpecFixture>
+        IUseFixture<object>
         where TSubject : TContract
     {
-        #region IUseFixture<XUnitSpecFixture> Members
+        #region IUseFixture<object> Members
 
-        public void SetFixture(XUnitSpecFixture unused)
+        public void SetFixture(object unused)
         {
             try
             {
@@ -34,6 +34,8 @@
         }
 
         #endregion
+
+        protected Exception ExceptionThrown { get; set; }
 
         protected abstract void EstablishContext();
 
