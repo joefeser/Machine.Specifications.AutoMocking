@@ -9,7 +9,8 @@
   <ItemGroup>
     <MergeFiles Include="$(SolutionsPath)\Specifications.AutoMocking\bin\Release\Specifications.AutoMocking.dll;
                          $(SolutionsPath)\NUnit.Specifications.AutoMocking\bin\Release\NUnit.Specifications.AutoMocking.dll;
-                         $(SolutionsPath)\Xunit.Specifications.AutoMocking\bin\Release\Xunit.Specifications.AutoMocking.dll;">
+                         $(SolutionsPath)\Xunit.Specifications.AutoMocking\bin\Release\Xunit.Specifications.AutoMocking.dll;
+						 $(SolutionsPath)\MSTest.Specifications.AutoMocking\bin\Release\MSTest.Specifications.AutoMocking.dll;">
       <MergedAssembly>$(DropsPath)\Specifications.AutoMocking.dll</MergedAssembly>
     </MergeFiles>
   </ItemGroup>
