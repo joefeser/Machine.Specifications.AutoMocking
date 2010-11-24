@@ -1,10 +1,9 @@
-namespace NUnit.Specifications.AutoMocking.Example.Rhino
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using MSTest.Specifications.AutoMocking.Rhino;
+using Rhino.Mocks;
+
+namespace MSTest.Specifications.AutoMocking.Example.Rhino
 {
-    using global::Rhino.Mocks;
-
-    using NUnit.Framework;
-    using NUnit.Specifications.AutoMocking.Rhino;
-
     /// <summary>
     ///   Example specification for a class without a contract that uses constructor based DI
     /// </summary>
@@ -20,18 +19,18 @@ namespace NUnit.Specifications.AutoMocking.Example.Rhino
         }
     }
 
-    [TestFixture]
+    [TestClass]
     public class when_the_news_controller_is_told_to_display_the_default_view : context_for_news_controller
     {
         private static string result;
 
-        [Test]
+        [TestMethod]
         public void It_should_ask_the_news_service_for_the_latest_headline()
         {
             newsService.AssertWasCalled(x => x.GetLatestHeadline());
         }
 
-        [Test]
+        [TestMethod]
         public void It_should_display_the_latest_headline()
         {
             Assert.AreEqual( result,"The latest headline");
