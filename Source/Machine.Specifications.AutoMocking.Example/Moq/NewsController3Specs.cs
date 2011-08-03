@@ -1,8 +1,7 @@
-using Machine.Specifications;
-using Machine.Specifications.AutoMocking.Rhino;
-using Rhino.Mocks;
+using Machine.Specifications.AutoMocking.Moq;
+using Moq;
 
-namespace Machine.Specifications.AutoMocking.Example.Rhino
+namespace Machine.Specifications.AutoMocking.Example.Moq
 {
     /// <summary>
     /// Example specification for a class without a contract that uses property based DI
@@ -23,7 +22,7 @@ namespace Machine.Specifications.AutoMocking.Example.Rhino
     {
         static string result;
 
-        Establish context = () => newsService.Stub(x => x.GetLatestHeadline()).Return("The latest headline");
+        Establish context = () => Mock.Get(newsService).Setup(x => x.GetLatestHeadline()).Returns("The latest headline");
 
         Because of = () => result = subject.Index(); 
 

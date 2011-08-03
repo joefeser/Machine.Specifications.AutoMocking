@@ -1,22 +1,21 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{02FC5C15-6549-4A1A-8108-3BDF79033877}</ProjectGuid>
+    <ProjectGuid>{FBD1B91B-6BA0-4CBE-A36A-54A488E0231F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Machine.Specifications.AutoMocking.Specs</RootNamespace>
-    <AssemblyName>Machine.Specifications.AutoMocking.Specs</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <RootNamespace>NUnit.Specifications.AutoMocking.Example</RootNamespace>
+    <AssemblyName>NUnit.Specifications.AutoMocking.Example</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
     <OldToolsVersion>3.5</OldToolsVersion>
     <UpgradeBackupLocation />
-    <TargetFrameworkProfile />
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -37,73 +36,53 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\Build\Debug\Tests\</OutputPath>
+    <OutputPath>..\..\Build\Debug\Example\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <NoWarn>169</NoWarn>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\..\Build\Release\Tests\</OutputPath>
+    <OutputPath>..\..\Build\Release\Example\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Machine.Specifications, Version=0.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Moq, Version=4.0.812.4, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL" />
+    <Reference Include="nunit.framework, Version=2.5.2.9222, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Libraries\Machine.Specifications.dll</HintPath>
+      <HintPath>..\..\Libraries\nunit.framework.dll</HintPath>
     </Reference>
-    <Reference Include="Moq, Version=4.0.812.4, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Libraries\Moq.dll</HintPath>
-    </Reference>
-    <Reference Include="Rhino.Mocks, Version=3.6.0.0, Culture=neutral, PublicKeyToken=0b3305902db7183f, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Libraries\Rhino.Mocks.dll</HintPath>
+    <Reference Include="Rhino.Mocks, Version=3.6.0.0, Culture=neutral, PublicKeyToken=0b3305902db7183f, processorArchitecture=MSIL" />
+    <Reference Include="SharpTestsEx">
+      <HintPath>..\..\Libraries\SharpTestsEx.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
-    <Reference Include="System.Data" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Moq\MoqMocksFactorySpecs.cs" />
-    <Compile Include="Moq\ObservationContextSpecs.cs" />
-    <Compile Include="Moq\SubjectDependencyBuilderSpecs.cs" />
-    <Compile Include="Moq\SubjectFactorySpecs.cs" />
-    <Compile Include="Moq\TypeExtensionsSpecs.cs" />
-    <Compile Include="Rhino\SubjectDependencyBuilderSpecs.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Rhino\SubjectFactorySpecs.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Rhino\TypeExtensionsSpecs.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Rhino\ObservationContextSpecs.cs">
-      <SubType>Code</SubType>
-    </Compile>
+    <Compile Include="Moq\NewsController2Specs.cs" />
+    <Compile Include="Moq\NewsController3Specs.cs" />
+    <Compile Include="Moq\NewsControllerSpecs.cs" />
+    <Compile Include="Moq\NewsServiceSpecs.cs" />
+    <Compile Include="NewsController3.cs" />
+    <Compile Include="NewsController2.cs" />
+    <Compile Include="NewsController.cs" />
+    <Compile Include="INewsService.cs" />
+    <Compile Include="NewsService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rhino\NewsController2Specs.cs" />
+    <Compile Include="Rhino\NewsController3Specs.cs" />
+    <Compile Include="Rhino\NewsControllerSpecs.cs" />
+    <Compile Include="Rhino\NewsServiceSpecs.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Machine.Specifications.AutoMocking\Machine.Specifications.AutoMocking.csproj">
-      <Project>{018BBBCD-B162-47EA-BF1A-03C568EEC7C8}</Project>
-      <Name>Machine.Specifications.AutoMocking</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
-      <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
       <Visible>False</Visible>
       <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
@@ -112,7 +91,7 @@
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
       <Visible>False</Visible>
       <ProductName>.NET Framework 3.5 SP1</ProductName>
-      <Install>false</Install>
+      <Install>true</Install>
     </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
       <Visible>False</Visible>
@@ -120,7 +99,16 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Machine.Specifications.AutoMocking\Machine.Specifications.AutoMocking.csproj">
+      <Project>{018BBBCD-B162-47EA-BF1A-03C568EEC7C8}</Project>
+      <Name>Machine.Specifications.AutoMocking</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NUnit.Specifications.AutoMocking\NUnit.Specifications.AutoMocking.csproj">
+      <Project>{8F38B187-3688-45CC-9646-3E088C5C8269}</Project>
+      <Name>NUnit.Specifications.AutoMocking</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
