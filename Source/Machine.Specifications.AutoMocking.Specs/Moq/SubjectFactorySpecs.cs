@@ -1,4 +1,3 @@
-using Moq.Stub;
 
 namespace Machine.Specifications.AutoMocking.Specs.Moq
 {
