@@ -17,9 +17,9 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 [assembly: AssemblyVersion("0.1.3")]
 [assembly: AssemblyFileVersion("0.1.3.0")]
-[assembly: AssemblyCopyright("Copyright (c) Machine.Specifications.AutoMocking 2011")]
+[assembly: AssemblyCopyright("Copyright (c) James Broome 2011")]
 [assembly: AssemblyConfiguration("Debug")]
-[assembly: AssemblyCompany("Machine.Specifications.AutoMocking")]
+[assembly: AssemblyCompany("James Broome")]
 [assembly: AssemblyProduct("Machine.Specifications.AutoMocking attempts to reduce noise in MSpec tests when c" +
     "reating mock objects, dependencies and the subject under test. (Debug DB: 0)")]
 

@@ -82,6 +82,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\CommonAssemblyInfo.cs">
+      <Link>Properties\CommonAssemblyInfo.cs</Link>
+    </Compile>
     <Compile Include="Moq\NewsController2Specs.cs" />
     <Compile Include="Moq\NewsController3Specs.cs" />
     <Compile Include="Moq\NewsControllerSpecs.cs" />
