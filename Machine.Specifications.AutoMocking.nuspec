@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Machine.Specifications.AutoMocking</id>
+    <title>Machine.Specifications.AutoMocking</title>
+    <version>0.1.3.0</version>
+    <authors>James Broome</authors>
+    <owners>James Broome</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Machine.Specifications.AutoMocking attempts to reduce noise in MSpec tests when creating mock objects, dependencies and the subject under test.</description>
+    <summary>Machine.Specifications.AutoMocking (Debug)</summary>
+    <dependencies>
+      <dependency id="RhinoMocks" version="3.6" />
+      <dependency id="Moq" version="4.0.10827" />
+      <dependency id="NUnit" version="2.5.10.11092" />
+    </dependencies>
+    <tags>MSpec</tags>
+  </metadata>
+  <files>
+    <file src="BuildOutput\bin\Machine.Specifications.AutoMocking.dll" target="lib" />
+    <file src="BuildOutput\bin\NUnit.Specifications.AutoMocking.dll" target="lib" />
+  </files>
+</package>
