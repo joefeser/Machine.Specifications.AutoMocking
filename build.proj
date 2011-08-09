@@ -35,10 +35,12 @@
   </ItemGroup>
 
   <!-- Binary files to publish -->
-  <ItemGroup>
-    <BinFiles Include="source\Machine.Specifications.AutoMocking\bin\$(Configuration)\*.*;
-                       source\NUnit.Specifications.AutoMocking\bin\$(Configuration)\*.*"/>
-  </ItemGroup>
+  <PropertyGroup>
+    <BinInclude>
+      source\Machine.Specifications.AutoMocking\bin\$(Configuration)\*.*;
+      source\NUnit.Specifications.AutoMocking\bin\$(Configuration)\*.*
+    </BinInclude>
+  </PropertyGroup>
 
   <!-- Nuget -->
   <PropertyGroup>

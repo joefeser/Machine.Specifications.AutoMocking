@@ -234,8 +234,11 @@
     <CallTarget Targets="PublishNugetPackage"/>
   </Target>
 
-  <Target Name="PublishBin" Condition="@(BinFiles) != ''">
+  <Target Name="PublishBin" Condition="$(BinInclude) != ''">
     <Message Importance="high" Text="PublishBin"/>
+    <CreateItem Include="$(BinInclude)" Exclude="$(BinExclude)">
+      <Output TaskParameter="Include" ItemName="BinFiles"/>
+    </CreateItem>
     <Copy SourceFiles="@(BinFiles)" DestinationFolder="$(BinDir)"/>
 
     <ItemGroup>
