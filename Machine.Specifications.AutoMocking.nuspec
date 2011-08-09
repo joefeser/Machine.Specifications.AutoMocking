@@ -14,7 +14,7 @@
       <dependency id="Moq" version="4.0.10827" />
       <dependency id="NUnit" version="2.5.10.11092" />
     </dependencies>
-    <tags>MSpec</tags>
+    <tags>MSpec, test, unit, testing, context, specification, BDD, TDD</tags>
   </metadata>
   <files>
     <file src="BuildOutput\bin\Machine.Specifications.AutoMocking.dll" target="lib" />
