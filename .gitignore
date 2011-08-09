@@ -12,3 +12,4 @@ _ReSharper.*
 NDependOut
 .setup-done
 packages/*
+BuildOutput/*

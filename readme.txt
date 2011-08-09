@@ -15,3 +15,5 @@ Provides:
 specified interface (optional) and subject type.
 
  - ReSharper File Templates for specifications for subjects with and without a contract.
+
+**You must run build.bat from the command line to put down the packages, otherwise the project will not build.**
