@@ -15,8 +15,8 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 [assembly: ComVisible(false)]
-[assembly: AssemblyVersion("0.1.3")]
-[assembly: AssemblyFileVersion("0.1.3.0")]
+[assembly: AssemblyVersion("0.1.4")]
+[assembly: AssemblyFileVersion("0.1.4.0")]
 [assembly: AssemblyCopyright("Copyright (c) James Broome 2011")]
 [assembly: AssemblyConfiguration("Debug")]
 [assembly: AssemblyCompany("James Broome")]
