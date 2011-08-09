@@ -47,7 +47,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\..\Build\Release\Tests\</OutputPath>
+    <OutputPath>bin\release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -131,7 +131,7 @@
     </PreBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
-    <PostBuildEvent>xcopy /y $(ProjectDir)bin\$(ConfigurationName)\*.* $(SolutionDir)..\Build\Debug\Tests\*.*</PostBuildEvent>
+    <PostBuildEvent>xcopy /y $(ProjectDir)bin\$(ConfigurationName)\*.* $(SolutionDir)Build\Debug\Tests\*.*</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -10,6 +10,7 @@
     <description>Machine.Specifications.AutoMocking attempts to reduce noise in MSpec tests when creating mock objects, dependencies and the subject under test.</description>
     <summary>Machine.Specifications.AutoMocking (Debug)</summary>
     <dependencies>
+      <dependency id="Machine.Specifications" version="0.4.23.0" />
       <dependency id="RhinoMocks" version="3.6" />
       <dependency id="Moq" version="4.0.10827" />
       <dependency id="NUnit" version="2.5.10.11092" />

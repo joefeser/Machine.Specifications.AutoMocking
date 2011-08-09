@@ -9,8 +9,17 @@
     <SchemaVersion>0</SchemaVersion>
   </PropertyGroup>
 
+  <!--Source and Tests Folder relative to root
+      No Leading or Trailing Slash
+  -->
+  <PropertyGroup>
+    <SourceRoot>Source</SourceRoot>
+    <TestsRoot>Source</TestsRoot>
+  </PropertyGroup>
+
   <!-- Project name and description -->
   <PropertyGroup>
+    <CompanyName>James Broome</CompanyName>
     <ProductName>Machine.Specifications.AutoMocking</ProductName>
     <ProductDescription>Machine.Specifications.AutoMocking attempts to reduce noise in MSpec tests when creating mock objects, dependencies and the subject under test.</ProductDescription>
   </PropertyGroup>
@@ -27,10 +36,8 @@
 
   <!-- Binary files to publish -->
   <ItemGroup>
-    <BinFiles Include="build\$(Configuration)\Machine.Specifications.AutoMocking.dll*;
-                       build\$(Configuration)\Machine.Specifications.AutoMocking.pdb;
-                       build\$(Configuration)\Example\NUnit.Specifications.AutoMocking.dll;
-                       build\$(Configuration)\Example\NUnit.Specifications.AutoMocking.pdb"/>
+    <BinFiles Include="source\Machine.Specifications.AutoMocking\bin\$(Configuration)\*.*;
+                       source\NUnit.Specifications.AutoMocking\bin\$(Configuration)\*.*"/>
   </ItemGroup>
 
   <!-- Nuget -->
