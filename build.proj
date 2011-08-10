@@ -44,7 +44,7 @@
 
   <!-- Nuget -->
   <PropertyGroup>
-    <NugetPackageSummary>Machine.Specifications.AutoMocking</NugetPackageSummary>
+    <NugetPackageSummary>Machine.Specifications.AutoMocking attempts to reduce noise in Machine.Specifications (MSpec) tests when creating mock objects, dependencies and the subject under test.</NugetPackageSummary>
     <NugetPackageId>Machine.Specifications.AutoMocking</NugetPackageId>
     <NugetPushUrl>http://packages.nuget.org/v1/</NugetPushUrl>
   </PropertyGroup>
