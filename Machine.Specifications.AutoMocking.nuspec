@@ -3,7 +3,7 @@
   <metadata>
     <id>Machine.Specifications.AutoMocking</id>
     <title>Machine.Specifications.AutoMocking</title>
-    <version>1.4.24.0</version>
+    <version>1.5.10.2</version>
     <authors>James Broome, Joe Feser</authors>
     <owners>James Broome</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -11,7 +11,7 @@
     <summary>Machine.Specifications.AutoMocking attempts to reduce noise in Machine.Specifications (MSpec) tests when creating mock objects, dependencies and the subject under test. (Debug)</summary>
     <projectUrl>https://github.com/joefeser/Machine.Specifications.AutoMocking</projectUrl>
     <dependencies>
-      <dependency id="Machine.Specifications" version="0.4.24.0" />
+      <dependency id="Machine.Specifications" version="0.5.10" />
       <dependency id="RhinoMocks" version="3.6" />
       <dependency id="Moq" version="4.0.10827" />
       <dependency id="NUnit" version="2.5.10.11092" />
