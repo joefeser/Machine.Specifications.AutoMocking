@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="PackageArtefacts" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup>
+    <RunMSpecTests>True</RunMSpecTests>
+    <MSpecSpecificationAssemblies>"$(MSBuildProjectDirectory)\..\Solutions\Specifications.AutoMocking.specs\Bin\Release\Specifications.AutoMocking.specs.dll"</MSpecSpecificationAssemblies>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <MergeFiles Include="$(SolutionsPath)\Specifications.AutoMocking\bin\Release\Specifications.AutoMocking.dll;
+                         $(SolutionsPath)\NUnit.Specifications.AutoMocking\bin\Release\NUnit.Specifications.AutoMocking.dll;
+                         $(SolutionsPath)\Xunit.Specifications.AutoMocking\bin\Release\Xunit.Specifications.AutoMocking.dll;
+						 $(SolutionsPath)\MSTest.Specifications.AutoMocking\bin\Release\MSTest.Specifications.AutoMocking.dll;">
+      <MergedAssembly>$(DropsPath)\Specifications.AutoMocking.dll</MergedAssembly>
+    </MergeFiles>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageFiles Include="$(SolutionsPath)\**\*.*"
+                       Exclude="$(SolutionsPath)\**\bin\**;
+                                  $(SolutionsPath)\**\Logs\**;
+                                  $(SolutionsPath)\**\obj\**;
+                                  $(SolutionsPath)\**\*.suo;
+                                  $(SolutionsPath)\**\*.cache;
+                                  $(SolutionsPath)\**\_ReSharper*\**;
+                                  $(SolutionsPath)\**\*ReSharper*">
+      <PackageName>$(DropsPath)\$(GlobalBuildVersionNumber)\$(PackageName).Source.v$(GlobalBuildVersionNumber).zip</PackageName>
+      <WorkingDirectory>$(SolutionsPath)</WorkingDirectory>
+    </PackageFiles>
+
+    <PackageFiles Include="$(DropsPath)\Specifications.AutoMocking.dll">
+      <PackageName>$(DropsPath)\$(GlobalBuildVersionNumber)\$(PackageName).dll.v$(GlobalBuildVersionNumber).zip</PackageName>
+      <WorkingDirectory>$(DropsPath)</WorkingDirectory>
+    </PackageFiles>
+  </ItemGroup>
+  
+  <PropertyGroup>
+    <SolutionName>Specifications.AutoMocking</SolutionName>
+    <SolutionsPath>$(MSBuildProjectDirectory)\..\Solutions</SolutionsPath>
+    <BuildPath>$(MSBuildProjectDirectory)\..\BuildSystem</BuildPath>
+    <SolutionRoot>$(BuildPath)\..\..</SolutionRoot>
+  </PropertyGroup>
+
+  <Import Project="$(BuildPath)\BuildSystem.proj" />
+
+  <Target Name="Build"
+        DependsOnTargets="CleanSolution;                            
+                            BuildSolutions;" />
+
+  <Target Name="BuildAndMerge"
+        DependsOnTargets="Build;
+                          Merge" />
+
+
+  <Target Name="RunSpecs"
+      DependsOnTargets="BuildAndMerge;
+                        RunMSpecSpecifications;" />
+
+  
+  <Target Name="PackageArtefacts"
+          DependsOnTargets="RunSpecs;
+                            Package;
+                            BuildSuccess" />
+
+</Project>

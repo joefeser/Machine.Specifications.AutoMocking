@@ -8,7 +8,11 @@ _ReSharper.*
 *.cache
 *~
 *.swp
-/Build
 NDependOut
-
+Drops
 .setup-done
+SpecificationReports
+/Solutions/TestResults
+Build/Debug/*
+BuildOutput/*
+packages/*
